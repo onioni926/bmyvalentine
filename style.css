@@ -1,0 +1,337 @@
+body {
+    background-color: rgb(248, 135, 152);
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #c20000;
+    letter-spacing: 2.5px;
+    flex: 1;
+    font-family: 'Palace Script MT', sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+}
+
+.image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif1{
+    width: 300px;
+    transition: 0.25s;
+}
+
+
+.buttons-outercase{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.inner-case{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+
+@media (hover: hover){
+    .bt-1{
+        border: none;
+        background-color: white;
+        border-radius: 60px;
+        width: 120px;
+        height: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        color: #c20000;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        margin-right: 100px;
+        transition: 0.25s;
+    }
+    
+    .bt-2{
+        border: none;
+        background-color: white;
+        border-radius: 60px;
+        width: 120px;
+        height: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        transition: 0.25s;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        color: #c20000;
+    }
+    
+    
+    .bt-1:hover{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+        cursor: pointer;
+    }
+    
+    .bt-1:active{
+        border: solid;
+        border-color: #9f0101;
+    }
+    
+    .bt-2:hover{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+        cursor: pointer;
+    }
+    
+    .bt-2:active{
+        border: solid;
+        border-color: #9f0101;
+    }
+    
+    
+    .bt-2:hover span{
+        cursor: pointer;
+        display: none;
+    }
+    
+    
+    .bt-2:hover:before{
+        cursor: pointer;
+        content: "Yes";
+    }
+    
+
+    .refresh-button{
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        width: 60px;
+        height: 25px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 12.5px;
+        color: #c20000;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        margin-right: 120px;
+        transition: 0.5s;
+        text-decoration: none;   
+    }
+    
+    
+    .refresh-button:hover{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+        cursor: pointer;
+    }
+    
+    .refresh-button:active{
+        border-color: #c20000;
+        border-width: 5px;
+        border-style: solid;
+    }
+
+
+    .x-icon{
+        color: red;
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        transition: 0.55s;
+    }
+    
+    .x-icon:hover{
+        cursor: pointer;
+        opacity: 50%;
+    }
+
+}
+
+
+@media (hover: none){
+    .bt-1{
+        border: none;
+        background-color: white;
+        border-radius: 60px;
+        width: 120px;
+        height: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        color: #c20000;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        margin-right: 100px;
+        transition: 0.25s;
+    }
+    
+    .bt-2{
+        border: none;
+        background-color: white;
+        border-radius: 60px;
+        width: 120px;
+        height: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        transition: 0.25s;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        color: #c20000;
+    }
+    
+    .bt-1:active{
+        border: solid;
+        border-color: #9f0101;
+    }
+    
+    
+    .bt-2:active{
+        border: solid;
+        border-color: #9f0101;
+    }
+
+
+    .bt2:active:before{
+        cursor: pointer;
+        content: "Yes";
+    }
+    
+
+    .refresh-button{
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        width: 60px;
+        height: 25px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 12.5px;
+        color: #c20000;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+        margin-right: 120px;
+        transition: 0.5s;
+        text-decoration: none;   
+    }
+    
+    .refresh-button:active{
+        border-color: #c20000;
+        border-width: 5px;
+        border-style: solid;
+    }
+
+
+    .x-icon{
+        color: red;
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        transition: 0.55s;
+    }
+}
+
+
+
+
+
+
+.footer-case{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+
+
+
+.warning-case{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-warningCase{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.warning-info-case{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.icon{
+    position: absolute;
+    bottom: -45px;
+    right: -50px;
+}
+
+
+.warning-details{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    top: 60%;
+    left: 15px;
+    font-family: "Poppins", sans-serif;
+    color: red;
+}
+
+
+.warning{
+    position: absolute;
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+
+
+.img1{
+    position: absolute;
+}
+
+
+.countdown{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    bottom: 10%;
+    left: 15px;
+    font-family: "Poppins", sans-serif;
+    color: black;
+}

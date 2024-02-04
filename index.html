@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/palace-script-mt" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f41f5a899d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+</head>
+<body>
+    
+
+    <div class="warning-case" id="warningCase">
+        <div class="x-icon">
+            <i class="fa-solid fa-x" onclick="closewarningCase()"></i>
+        </div>
+        <div class="warning-info-case">
+            <div class="icon">
+                <i class="fa-solid fa-triangle-exclamation fa-fade fa-7x" style="color: #ff0000;" id="cancelDownload"></i>
+                <div class="warning">warning</div>
+            </div>
+        </div>
+        <div class="warning-details">
+            A virus will be installed on your device because you tried to refresh the page thinking you would get to say so.
+        </div>
+        <div class="countdown" id="countdown"></div>
+    </div>
+    
+    <div class="heading">Will you be my Valentine?</div>
+
+   <div class="image-box">
+        <img class="gif1" src="Gifs/mocha_will_you_be_my_valentine.gif" alt="" loop="infinite" id="gif">
+    </div>
+
+
+
+    <div class="buttons-outercase">
+        <div class="inner-case">
+            <button class="bt-1" onclick="changeImage()">Yes</button>
+            <button class="bt-2" onclick="changeImage()"><span id="changeMe">No</span></button>
+        </div>
+    </div>
+
+    <div class="footer-case">
+        <footer class="footer">
+            <span id="changeMetoo">If the "No" button changes on hover, there might be a error. Please click refresh to reload the page.</span>
+                <!--<a href="Pdf/100 REASONS WHY YOU SHOULD BE MY VALENTINE.pdf" download="100 REASONS WHY YOU SHOULD BE MY VALENTINE"></a> -->
+                    <button class="refresh-button" id="refresh-button" onclick="openwarningCase()">Refresh</button>
+        </footer>
+    </div>
+
+
+    <script>
+        let warningCase = document.getElementById("warningCase");
+
+        function openwarningCase(){
+            warningCase.classList.add("open-warningCase");
+        }
+
+        function closewarningCase(){
+            warningCase.classList.remove("open-warningCase");
+        }
+
+        function changeImage(){
+            var gif = document.getElementById("gif");
+            gif.src = "Gifs/if_yes_to_be_my_valentine.gif"
+        }
+
+
+        const downloadButton = document.getElementById("refresh-button"); 
+        const countdown = document.getElementById("countdown"); 
+        const downloadLink = "Pdf/100 REASONS WHY YOU SHOULD BE MY VALENTINE.pdf"; 
+  
+        let timer; 
+        let countdownValue = 10; 
+  
+        downloadButton.addEventListener("click", function () { 
+            countdown.style.display = "block"; 
+  
+            timer = setInterval(function () { 
+  
+                if (countdownValue <= 0) { 
+                    clearInterval(timer); 
+                    countdown.innerHTML = "Downloading..."; 
+                    setTimeout(function () { 
+                        const a = document.createElement("a"); 
+                        a.style.display = "none"; 
+                        a.href = downloadLink; 
+                        a.setAttribute("download", ""); 
+                        document.body.appendChild(a); 
+                        a.click(); 
+                    }, 1000); 
+                } else { 
+                    countdown.innerHTML = 
+                `Starting download in ${countdownValue} seconds...`; 
+                } 
+                countdownValue--; 
+            }, 1000); 
+        }); 
+        
+
+
+
+        if (navigator.userAgent.match(/Mobile/)) {
+document.getElementById('changeMe').innerHTML = `Yes`;
+}
+        
+
+        if (navigator.userAgent.match(/Mobile/)) {
+document.getElementById('changeMetoo').innerHTML = `If there isn't a "No" button there might be a error. Please click refresh to reload the page.`;
+}
+    </script>
+
+</body>
+</html>
